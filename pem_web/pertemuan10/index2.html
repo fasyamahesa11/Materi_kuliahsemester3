@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+</head>
+<body>
+    <h1 class="hello">Hello World!!!</h1>
+    <p>This is a sample paragraph</p>
+    <button id="trigger">Change Content</button>
+
+    <script>
+        // Mendapatkan elemen-elemen yang diperlukan
+        const change = document.getElementById("trigger");
+        let title = document.getElementById("title");
+        let heading = document.getElementsByClassName("hello");
+        let p = document.querySelector("p");
+
+        // Menambahkan event listener pada tombol
+        change.addEventListener("click", () => {
+            // Membuat elemen paragraf baru hanya setelah tombol diklik
+            let newParagraph = document.createElement("p");
+            newParagraph.innerHTML = "Ini paragraf tambahan..";
+            
+            // Menambahkan paragraf baru ke dalam body
+            document.body.appendChild(newParagraph); 
+
+            // Mengubah konten dan gaya saat tombol diklik
+            title.innerHTML = "DOM Manipulating";
+            heading[0].style.color = "blue";  // Mengubah warna teks
+            p.innerHTML = "Selamat Datang...";  // Mengubah teks paragraf pertama
+        });
+    </script>
+</body>
+</html>
+
