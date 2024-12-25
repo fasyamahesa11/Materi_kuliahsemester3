@@ -1,0 +1,1 @@
+CALL tambah_transaksi(1, 750000, '2024-12-26');
